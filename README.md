@@ -1,4 +1,4 @@
-# Proyecto Liz
+# Proyecto biblioteca
 
 Pagina web local organizada con frontend separado y backend en Node.js/Express conectado a MongoDB.
 

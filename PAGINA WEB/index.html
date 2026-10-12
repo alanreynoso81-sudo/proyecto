@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Biblioteca</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de Biblioteca</h1>
+    <p class="subtitle">Gestion de prestamos y disponibilidad de libros</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Registrar Salida</h2>
+      <form id="loanForm">
+        <div class="form-group">
+          <label for="student">Nombre del Usuario / Alumno</label>
+          <input type="text" id="student" name="student" placeholder="Ej. Carlos Lopez" required>
+        </div>
+
+        <div class="form-group">
+          <label for="book">Libro</label>
+          <input type="text" id="book" name="book" placeholder="Ej. Cien anos de soledad" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Fecha de Salida</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <p id="formMessage" class="form-message" role="status"></p>
+        <button type="submit">Registrar Prestamo</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Libros Prestados</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Libro</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Accion</th>
+            </tr>
+          </thead>
+          <tbody id="loansTableBody">
+            <tr>
+              <td colspan="5">Cargando prestamos...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
